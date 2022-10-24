@@ -8,13 +8,13 @@
       class="text-white headerCustomStyle"
     >
       <q-toolbar>
-        <img
+<!--         <img
           src="./assets/moneroGift.png"
           style="max-width: 50px;"
           class="q-my-sm"
-        >
+        > -->
         <q-toolbar-title>
-          Gift Monero
+          Gift Bitcoin
         </q-toolbar-title>
         <q-space class="desktop-only" />
         <q-btn
@@ -31,7 +31,6 @@
                 v-for="(item, index) in options"
                 :key="index"
                 clickable
-                @click="test(item.value)"
               >
                 <q-item-section>{{ options[index].label }}</q-item-section>
               </q-item>
@@ -46,7 +45,6 @@
           toggle-color="white"
           :options="options"
           class="desktop-only"
-          @update:model-value="test"
         />
       </q-toolbar>
 
@@ -67,24 +65,27 @@
 </template>
 <script setup>
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
-const router = useRouter()
+// import { useRouter } from 'vue-router'
+// const router = useRouter()
 const model = ref(window.location.pathname)
 
-function test (newRoute) {
+/* function test (newRoute) {
   router.push(newRoute)
-}
+} */
 const options = [
   { label: 'Home', value: '/' },
   { label: 'Create', value: '/create' },
   { label: 'Manage', value: '/manage' },
-  { label: 'Redeem', value: '/redeem' }
+  { label: 'Redeem', value: '/redeem' },
+  { label: 'F.A.Q.', value: '/faq' }
   // { label: 'Faq', value: 'five' }
 ]
 </script>
 <style lang="sass" scoped>
 .headerCustomStyle
-  background: #4c4c4c !important
+  background: $secondary !important
 .ntp
   padding-top: 60px !important
+.back
+  background-color: $primary
 </style>

@@ -8,8 +8,7 @@
       class="column col-12 col-md-12"
     >
       <q-card
-        class="text-white text-center q-pa-md"
-        style="background: #4c4c4c;"
+        class="text-white text-center q-pa-md back"
       >
         <div class="row justify-center">
           <q-card
@@ -47,7 +46,7 @@
 <script setup>
 import { toRef, computed } from 'vue'
 import password from '@/components/create/customize/pass-word.vue'
-const moneroFullLogo = require('@/assets/svgs/monero-xmr-logo-full.svg')
+const moneroFullLogo = require('@/assets/svgs/Bitcoin_logo.svg')
 const props = defineProps({
   cardinfoobject: { type: Object, required: true }
 })
@@ -66,10 +65,12 @@ const cardFrom = computed(() => {
   }
   return "<span class='text-weight-bold'>From:</span> " + fromValue
 })
-const howToRedeem = 'Go to giftmonero.app/redeem within <span class=\'text-weight-bold\' style=\'color:#ff6600;\'>2 Hours</span> to get your Monero!'
+const howToRedeem = 'Go to giftbitcoin.app/redeem within <span class=\'text-weight-bold\' style=\'color:#ff6600;\'>20 Days</span> to get your Bitcoin!'
 </script>
 
 <style lang="sass" scoped>
 .moneroLogo
   width: 100%
+.back
+  background-color: $secondary
 </style>

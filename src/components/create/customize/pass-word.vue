@@ -31,8 +31,7 @@
           class="col col-6 col-md-3"
         >
           <q-card
-            class="text-white text-center q-pb-sm"
-            style="background: #ff6600"
+            class="text-white text-center q-pb-sm back"
           >
             <div
               style="margin-bottom: -5%;"
@@ -77,4 +76,6 @@ const newList = getWordListArray(text)
 .moneroLogo
   height: auto
   width: 100%
+.back
+  background-color: $primary
 </style>
