@@ -1,9 +1,15 @@
 <template>
- <div class="'text-center'">
+  <div
+    class="'text-center'"
+    :class="{'q-py-md': $q.screen.lt.sm}"
+  >
     <div class="text-center">
-        <q-btn color="secondary" label="Create Card!" />
+      <q-btn
+        color="secondary"
+        label="Create Card!"
+      />
     </div>
- </div>
+  </div>
 </template>
 <script setup>
 </script>

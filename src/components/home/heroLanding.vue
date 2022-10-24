@@ -2,7 +2,7 @@
   <div class="">
     <!-- Stack the columns on mobile by making one full-width and the other half-width -->
     <div class="row justify-evenly">
-      <div class="col col-md-6 justify-evenly">
+      <div class="col col-md-6 col-12 justify-evenly">
         <div
           class="column justify-evenly"
           style="height: 100%"
@@ -22,7 +22,7 @@
               </q-card-section>
             </q-card>
           </div>
-          <div class="row">
+          <div class="row" :class="{'q-py-md': $q.screen.lt.sm}">
             <q-card
               class="my-card text-center col-12"
               style=""
@@ -69,7 +69,7 @@
           </div>
         </div>
       </div>
-      <div class="col col-md-4 q-mt-md">
+      <div class="col col-md-4 col-9 q-mt-md">
         <displayCardInfo :cardinfoobject="cardinfoobject" />
       </div>
     </div>
